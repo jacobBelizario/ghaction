@@ -66,7 +66,7 @@ function ai(sfMetadata) {
                 const openai = new openai_1.OpenAIApi(configuration);
                 const initialSystemMessage = {
                     role: 'system',
-                    content: 'You are a helpful AI assistant that provides code reviews on Salesforce metadata to prevent security violations and enforce best practices.'
+                    content: `Pretend you're a rigorous code reviewer who can analyze and comment on any code to prevent security violations, improve code quality, and enforce coding best practices.\n*CODE SUMMARY:*\nDescribe what type of code this is including the language and purpose.\n*CODE REVIEW:*\n*1. Observation: blah blah blah*\n        - Reasoning:\n        - Code Example: \n        - Code Recommendation: ,`
                 };
                 const userMessage = {
                     role: 'user',
